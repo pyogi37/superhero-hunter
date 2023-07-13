@@ -30,10 +30,16 @@
   width: 100%;
   height: calc(100% - 55px); /* Adjust the height to account for the navbar height */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background overlay */
   z-index: 9999; /* Ensure the loading image appears above other content */
+}
+
+.loading-container p{
+     font-weight: bolder;
+     color: azure;
 }
 
 .loading-image {

@@ -29,6 +29,12 @@ async function fetchFavoriteHeroesComplete() {
 		loadingMessage.innerHTML = '<img src="./images/loading-img.gif" class="loading-image">';
 		document.body.appendChild(loadingMessage);
 
+		if(favoriteHeroes == null)
+		{ 	
+			loadingMessage.innerHTML += "<p>No Favorites added</p>"
+			return;
+		}
+
 		for (const heroId of favoriteHeroes) {
 			const hero = await fetchHero(heroId);
 			console.log("hero data", hero);
