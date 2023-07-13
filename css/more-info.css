@@ -1,0 +1,105 @@
+.info-container{
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(51, 51, 51, 0.5);
+	width: 60%;
+	height: 70%;
+	position: absolute;
+	top: 15%;
+	margin-left: 15px;
+	animation: glowing-border 2s ease-in-out infinite;
+
+}
+
+.basic-info{
+
+	color: gainsboro;
+	text-align: center;
+	font-weight: bold;
+	font-family: monospace;
+	font-size: 40px;
+	margin: 10px;
+
+
+}
+
+.detailed-info{
+	display: flex;
+	width: 100%;
+	height: 10%;
+
+}
+
+.dropdown-buttons{
+	display: flex;
+	cursor: pointer;
+	width: 30%;
+	height: 90%;
+	background-color: gray;
+	border-radius: 2px;
+	margin: 25px;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.dropdown-buttons .dropdown-menu{
+	position: absolute ;
+	top: 105%;
+	right: 3%;
+	width: 90%;
+	height: 50vh;
+	justify-content: center;
+	list-style: none;
+	margin: 5px;
+	overflow: scroll;
+	color: azure;
+}
+
+.dropdown-buttons ul li{
+	border: 1px solid lightgray;
+
+}
+
+
+.hero-icon{
+	position: fixed;
+	right: 10vw;
+	top: 20vh;
+	margin: 10px;
+	width: 20vw;
+	animation: glowing-border 2s ease-in-out infinite;
+}
+
+
+
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 5px rgba(20, 80, 150, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(20, 80, 150, 0.8), 0 0 40px rgba(20, 80, 150, 0.8), 0 0 60px rgba(20, 80, 150, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(20, 80, 150, 0.8);
+  }
+}
+
+
+.loading-container {
+  position: fixed;
+  top: 55px; /* Adjust the top value according to the height of your navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 55px); /* Adjust the height to account for the navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background overlay */
+  z-index: 9999; /* Ensure the loading image appears above other content */
+}
+
+.loading-image {
+     width: 30%; /* Adjust the width and height to match your loading image dimensions */
+  height: 30%;
+}

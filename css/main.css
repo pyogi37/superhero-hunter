@@ -1,0 +1,133 @@
+ body {
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-color: lightgray;
+}
+
+
+
+.navbar {
+    background-color: rgba(51, 51, 51, 0.5);
+    overflow: hidden;
+
+}
+
+/* CSS for the navigation links */
+.navbar a {
+     float: right;
+     color:  azure;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+}
+
+
+
+/* CSS for the search bar */
+.search-container {
+    float: left;
+}
+
+.logo{
+     font-weight: bolder;
+     color: azure;
+     margin-left: 10px;
+     font-size: 20px;
+     display: inline-block;
+
+}
+
+.logo span{
+     color: red;
+}
+
+
+.search-container input[type="text"] {
+    padding: 6px;
+    margin: 8px;
+    margin-left: 15px;
+    font-size: 17px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgba(51, 51, 51, 0.5);
+    color: lightgray;
+}
+
+.search-container img {
+     width: 20px;
+     height: 20px;
+     margin: 0px 3px 0px 0px ;
+}
+
+/* CSS for the search results  */
+
+
+.search-results{
+     display: flex;
+     width: 28%;
+     height: 80%;
+     position: absolute;
+     left: 50px;
+     top: 55px;
+     overflow: scroll;
+     border-radius: 5px;
+}
+
+.search-results-list{
+     height: 100%;
+     width: 100%;
+     list-style: none;
+     position: relative;
+
+}
+
+.search-results-list li{
+     left: 2px;
+}
+
+
+.flex-row{
+     height: 18%;
+     width: 100%;
+     background-color: rgba(51, 51, 51, 0.5);
+     border-bottom: solid lightgray 1px;
+     border-top: solid lightgray 1px;
+     flex-grow: 1;
+}
+
+.single-search-result{
+     display: flex;
+}
+
+.img-info{
+     display: flex;
+     flex-direction: row;
+     position: relative;
+}
+
+.img-info img{
+     width: 60px;
+     height: 90px;
+     margin: 5px;
+}
+
+.hero-info a{
+     text-decoration: none;
+     color: azure;
+     position: absolute;
+     top: 40%;
+     margin-left: 15px;
+
+}
+
+
+.fav-btn{
+     background-color:rgba(51, 51, 51, 0.5) ;
+     border: inherit;
+     cursor: pointer;
+     padding-right: 5px;
+}
+
+::-webkit-scrollbar {
+ display: none;
+}

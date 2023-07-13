@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your SuperHero</title>
+    <link rel = "stylesheet" href = "./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./images/hammer.png">
+</head>
+<body>
+
+    <div class = "main-wrapper">
+        <div class = "app">
+
+           <div class="navbar">
+            <a href="./favourites.html"> Favourites</a>
+            
+            <div class="search-container">
+                <a class="logo" href="./index.html" style="float: left;">Super<span>Hero</span></a>
+                <img src="./images/hammer.png">
+                <input id="search-bar" type="text" placeholder="Search" onkeyup="searchHeroes()">
+                
+            </div>
+        </div>
+
+
+        <div class="search-results">
+            <ul class="search-results-list"> 
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script src = "./js/app.js"></script>
+    
+</body>
+</html>

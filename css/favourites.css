@@ -1,0 +1,42 @@
+
+.favourites{
+     display: flex;
+     width: 28%;
+     height: 80%;
+     position: absolute;
+     left: 50px;
+     top: 55px;
+     overflow: scroll;
+     border-radius: 5px;
+}
+
+.favourites-list{
+     height: 100%;
+     width: 100%;
+     list-style: none;
+     position: relative;
+
+}
+
+.favourites-list li{
+     left: 2px;
+}
+
+
+.loading-container {
+  position: fixed;
+  top: 55px; /* Adjust the top value according to the height of your navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 55px); /* Adjust the height to account for the navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background overlay */
+  z-index: 9999; /* Ensure the loading image appears above other content */
+}
+
+.loading-image {
+     width: 30%; /* Adjust the width and height to match your loading image dimensions */
+  height: 30%;
+}
