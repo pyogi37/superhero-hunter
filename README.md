@@ -52,13 +52,16 @@ Contributions are welcome! If you have any ideas, improvements, or bug fixes, pl
 
 ## Screenshots
 
-![favoritespage](https://github.com/pyogi37/superhero-hunter/assets/88927018/99af9fd1-8d5d-4303-a16b-d22d0d9ccd94)
-
 ![homepage](https://github.com/pyogi37/superhero-hunter/assets/88927018/df81e493-6dbb-4ac7-88d1-c503ba94cbb1)
 
-![image](https://github.com/pyogi37/superhero-hunter/assets/88927018/16116a02-ff47-4a7a-b261-59139f202475)
+
+![favoritespage](https://github.com/pyogi37/superhero-hunter/assets/88927018/99af9fd1-8d5d-4303-a16b-d22d0d9ccd94)
+
+
 
 ![more info](https://github.com/pyogi37/superhero-hunter/assets/88927018/ec9de61d-6fe9-48ff-94df-8acd4fed0f61)
+
+
 
 
 
