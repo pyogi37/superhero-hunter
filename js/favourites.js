@@ -1,6 +1,5 @@
 async function fetchHero(heroId) {
 	try {
-		console.log('inside fetchHero');
 
 		var apiUrl = `https://gateway.marvel.com:443/v1/public/characters/${heroId}?apikey=b3518615117c78a3077efc679d39bf08&hash=386db2ed07fb138010fe8797a873b116&ts=1`;
 		const response = await fetch(apiUrl);
@@ -20,7 +19,6 @@ async function fetchFavoriteHeroesComplete() {
 
     // Retrieve the favoriteHeroes array from localStorage
 		const favoriteHeroes = JSON.parse(localStorage.getItem('favoriteHeroes'));
-		console.log(favoriteHeroes);
 
     // Show loading page
 		var loadingMessage = document.createElement("div");
@@ -31,13 +29,12 @@ async function fetchFavoriteHeroesComplete() {
 
 		if(favoriteHeroes == null)
 		{ 	
-			loadingMessage.innerHTML += "<p>No Favorites added</p>"
+			loadingMessage.innerHTML += "<p>No Favorites added</p>";
 			return;
 		}
 
 		for (const heroId of favoriteHeroes) {
 			const hero = await fetchHero(heroId);
-			console.log("hero data", hero);
 
 			if (hero) {
 				favoriteHeroesComplete.push(hero);
@@ -48,7 +45,6 @@ async function fetchFavoriteHeroesComplete() {
 		document.body.removeChild(loadingMessage);
 
     // Do something with the favoriteHeroesComplete array
-		console.log(favoriteHeroesComplete);
 
 		var favoriteHeroesList = document.querySelector(".favourites-list");
 
@@ -88,10 +84,8 @@ async function fetchFavoriteHeroesComplete() {
     // Save the favoriteHeroesComplete array back to localStorage
 		localStorage.setItem('favoriteHeroesComplete', JSON.stringify(favoriteHeroesComplete));
 
-		console.log('Favorite heroes complete fetched successfully!');
 
 		addHeroToFav();
-		console.log("events added");
 	} catch (error) {
 		console.error('Error occurred while fetching favorite heroes complete:', error);
 	}
@@ -102,21 +96,16 @@ fetchFavoriteHeroesComplete();
 
 
 function addHeroToFav() {
-	console.log("inside events")
 	let favouriteButton = document.querySelectorAll(".fav-btn");
-	console.log(favouriteButton);
 	favouriteButton.forEach((btn) =>  {
 		btn.addEventListener("click",  function(){
-			console.log("button clicked");
-			console.log(this.dataset.heroid);
 			let heroId = this.dataset.heroid;
 			// removeHeroFromFav(heroId);
 
 			try {
-				console.log("inside addHeroToFav")
 				let favoriteHeroes = JSON.parse(localStorage.getItem('favoriteHeroes'));
 				if (!favoriteHeroes) {
-      // If it doesn't exist, create an empty array and save it in localStorage
+      			// If it doesn't exist, create an empty array and save it in localStorage
 					favoriteHeroes = [];
 				}
 

@@ -7,7 +7,6 @@ async function fetchHero() {
 	const heroId = queryParams.get('heroid');
 
 	try {
-		console.log('inside fetchHero');
 
 		 // Show loading page
 		var loadingMessage = document.createElement("div");
@@ -17,7 +16,7 @@ async function fetchHero() {
 		document.body.appendChild(loadingMessage);
 
 		var apiUrl = `https://gateway.marvel.com:443/v1/public/characters/${heroId}?apikey=b3518615117c78a3077efc679d39bf08&hash=386db2ed07fb138010fe8797a873b116&ts=1`;
-		const response = await fetch(apiUrl)
+		const response = await fetch(apiUrl);
 		const data = await response.json();
 
 		 // Remove loading page
@@ -28,10 +27,11 @@ async function fetchHero() {
 		// console.log(data.data.results[0]);
 		fillDetailsinDOM();
 
-	} catch (error) {
+	} 
+	catch (error) {
 		console.error("Error:", error);
-    throw error; // Re-throw the error to handle it further up the call stack
-}
+    	throw error; // Re-throw the error to handle it further up the call stack
+    }
 }
 
 fetchHero();
@@ -39,7 +39,6 @@ fetchHero();
 function fillDetailsinDOM() {
 
 	const hero = JSON.parse(localStorage.getItem('hero'));
-	console.log(hero);
 
 	// Update the inner text of the div element with the hero's name
 	const heroNameElement = document.querySelector('.hero-name');
@@ -80,8 +79,6 @@ function fillDetailsinDOM() {
 	// Append the stories list to the stories section
 	storiesElement.appendChild(storiesList);
 
-
-
 }
 
 
@@ -97,4 +94,3 @@ function createListItems(items) {
 
 	return list;
 }
-

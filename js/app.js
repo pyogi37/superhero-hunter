@@ -2,8 +2,6 @@
   var inputText = document.getElementById("search-bar").value;
 
       // Make an API request using the input text
-      // Replace the placeholder URL with your actual API endpoint
-  console.log(inputText);
 
   if(inputText.length == 0){
     searchResultsList.innerHTML = "";
@@ -14,8 +12,6 @@
   fetch(apiUrl)
   .then(response => response.json())
   .then(data => {
-          // Process the API response data
-    console.log(data.data.results);
 
     let favoriteHeroes = localStorage.getItem("favoriteHeroes");
     if(favoriteHeroes == null){
@@ -29,11 +25,12 @@
 
   var searchResultsList = document.querySelector(".search-results-list");
 
-          // Clear the existing search results
+  // Clear the existing search results
   searchResultsList.innerHTML = "";
 
-          // Loop through the results and create list items
+  // Loop through the results and create list items
   data.data.results.forEach(hero => {
+
     var listItem = document.createElement("li");
     listItem.innerHTML += 
     `
@@ -54,15 +51,14 @@
     </div>
     `
 
-            // Append the list item to the search results list
+    // Append the list item to the search results list
     searchResultsList.appendChild(listItem);
 
 
   })
 
-     // Adding the appropritate events to the buttons after they are inserted in dom
+  // Adding the appropritate events to the buttons after they are inserted in dom
   events();
-  console.log("events added");
 
 })
   .catch(error => {
@@ -74,11 +70,9 @@
 
 // Function for attacthing eventListener to buttons
 function events() {
-  console.log("inside events")
   let favouriteButton = document.querySelectorAll(".fav-btn");
   favouriteButton.forEach((btn) =>  {
     btn.addEventListener("click",  function(){console.log("button clicked");
-      console.log(this.dataset.heroid);
       let heroId = this.dataset.heroid;
       addHeroToFav(heroId);
     })
@@ -87,14 +81,12 @@ function events() {
   let characterInfo = document.querySelectorAll(".character-info");
   characterInfo.forEach((character) => {
     character.addEventListener("click",  function(){console.log("button clicked");
-      console.log(this.dataset.heroid);
     })
   })
 }
 
 function addHeroToFav(heroId) {
   try {
-    console.log("inside addHeroToFav")
     let favoriteHeroes = JSON.parse(localStorage.getItem('favoriteHeroes'));
     if (!favoriteHeroes) {
       // If it doesn't exist, create an empty array and save it in localStorage
