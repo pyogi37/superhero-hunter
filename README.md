@@ -1,4 +1,3 @@
-Certainly! Here's an example of a README file for a web application called "Find Your SuperHero":
 
 # Find Your SuperHero
 
